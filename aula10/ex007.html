@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somador</title>
+    <style>
+        body{
+            background-color: lightblue;
+        }
+
+        div#container{
+            margin: auto;
+            padding: 10px;
+            text-align: center;
+        }
+
+        div#container > h1{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        div#container > label{
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        div#container > input{
+            display: block;
+            margin: auto;
+            margin-bottom: 10px;
+            width: 350px;
+            height: 25px;
+            border: none;
+            border-radius: 7px;
+        }
+
+        div#container > input[type=button]{
+            cursor: pointer;
+            font-weight: bolder;
+        }
+
+        div#container > input[type=button]:hover{
+            background-color: black;
+            color: white;
+        }
+
+        div#container > input[type=submit]:active{
+            background-color: lightgray;
+            color: black;
+        }
+
+        div#res{
+            text-align: center;
+            font-size: 18pt;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Somador para idiotas</h1>
+        <label for="number1">Digite o primeiro número:</label>
+        <input type="number" name="number1" id="number1">
+        <label for="number2">Digite o segundo número:</label>
+        <input type="number" name="number2" id="number2">
+
+        <input type="button" value="Somar" onclick="somar()">
+    </div>
+    <div id="res">Resultado</div>
+
+    <script>
+        function somar(){
+          var tn1 = document.getElementById('number1')
+          var tn2 = document.getElementById('number2')
+          var res = document.getElementById('res')
+          var n1 = Number(tn1.value) 
+          var n2 = Number(tn2.value)
+          var soma = n1 + n2
+          res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${soma}</strong>.`
+        }
+    </script>
+</body>
+</html>

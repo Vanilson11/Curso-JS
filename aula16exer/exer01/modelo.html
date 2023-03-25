@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador de Números</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Analisador de Números</h1>
+    </header>
+
+    <section>
+        Digite um número: <input type="number" name="valor" id="valor"> 
+        <input type="button" value="Adicionar" onclick="adicionar()"> <br>
+
+        <select name="tabuada" id="seltab" size="10"> <!--"size" define o tamanho (acredito que na vertical) do select de acordo com a quantidade de options que ele irá ter-->
+            <option></option>
+        </select> <br>
+
+        <input type="button" value="Finalizar" onclick="analisar()">
+    </section>
+
+    <footer>
+        <p>&copy; Curso em Video</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

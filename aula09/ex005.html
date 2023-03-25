@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entendendo o DOM</title>
+    <style>
+        body{
+            background-color: lightblue;
+            padding: 10px;
+        }
+        h1{
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando os estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <p>Vanilson, eu te amo</p>
+    <p>Vanilson e Lídia juntos para sempre</p>
+    <p>Lída, meu amor, casa comigo</p>
+    <div class="msg">Clique em mim...</div>
+    <script>
+       /*window.document.write(window.document.URL)*/ 
+       var body = document.body
+       var p1 = document.getElementsByTagName('p')[1]
+       var msg = document.querySelector('div.msg')
+       body.style.background = 'lightgreen'
+       document.write(p1.innerHTML)
+       msg.style.background = 'blue'
+       msg.style.color = 'white'
+       msg.innerText = ('Estou aguradando...')
+     </script>
+</body>
+</html>
